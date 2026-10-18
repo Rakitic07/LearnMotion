@@ -1,0 +1,72 @@
+app/account.py
+  s_a3ca92c423877c::t_40ab87ff1e89aa 96,116,133
+app/subjects/_summary_manifest.json
+  s_a3ca92c423877c::t_2f48f2167f1b17 1
+.gitignore
+  s_a3ca92c423877c::t_90762b02461cb6 9
+app/subjects/__init__.py
+  s_a3ca92c423877c::t_b3ca7f23b57d66 5,8,391,401-409
+  s_a3ca92c423877c::t_3cf9849cb79076 410-411
+scripts/vercel_build.py
+  s_a3ca92c423877c::t_0b58299915b5ae 1-29
+app/static/js/chat-worker.js
+  s_a3ca92c423877c::t_debda64ac9bd09 25-28,36-37
+app/db.py
+  s_a3ca92c423877c::t_ae81dca72fd69e 88,97-99,101-102,159-160,165-172
+  s_a3ca92c423877c::t_7245e5172b374c 89-96,213,218,221,224
+  s_a3ca92c423877c::t_c72a13b46b2a43 149-153
+  s_a3ca92c423877c::t_f5d13ba6b39561 223
+  s_a3ca92c423877c::t_7e8c697edfb5ce 214-217,219-220,222
+app/static/js/chat.js
+  s_a3ca92c423877c::t_52dba062db846f 51-52,386
+  s_a3ca92c423877c::t_78bbbad5ae6733 74
+  s_a3ca92c423877c::t_d83ae1751c68a9 53-55,58,76,378-379,384,394,425-426,432,490,508
+app/static/manifest-v2.webmanifest
+  s_a3ca92c423877c::t_4151d92c56f0f9 1-17
+vercel.json
+  s_a3ca92c423877c::t_f4fd66b4617402 10
+  s_a3ca92c423877c::t_90762b02461cb6 3-9,11-23
+app/templates/index.html
+  s_a3ca92c423877c::t_e28765e4bc17d4 28-29
+  s_a3ca92c423877c::t_fe8328067583e1 15-16,24-25,33
+app/static/sw.js
+  s_a3ca92c423877c::t_20a61b792cecd9 1,4-5,7
+.env.example
+  s_a3ca92c423877c::t_6663029495671f 5-7
+app/admin.py
+  s_a3ca92c423877c::t_04e404b3eeaa86 104
+app/routes.py
+  s_a3ca92c423877c::t_8c7a26d159155f 67-69,74-76,86-87,93-95,273-274,280-281
+app/static/js/account.js
+  s_a3ca92c423877c::t_b93173706ffb2e 521
+app/static/js/app.js
+  s_a3ca92c423877c::t_b93173706ffb2e 516-518
+app/static/img/learnmotion-icon.svg
+  s_a3ca92c423877c::t_30ec8b50540b32 1-29
+app/auth.py
+  s_a3ca92c423877c::t_40ab87ff1e89aa 49-53
+README.md
+  s_a3ca92c423877c::t_e28765e4bc17d4 35
+  s_a3ca92c423877c::t_6663029495671f 31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5c893d66eda0f4df2a58721f2702038a215b9605",
+  "prompts": {},
+  "humans": {
+    "h_a373eedd7fd2e3": {
+      "author": "rakbiswa <rakbiswa@cisco.com>"
+    }
+  },
+  "sessions": {
+    "s_a3ca92c423877c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a14b16-6ac7-72a3-a9f7-937b7b2f2d49",
+        "model": "gpt-6-luna"
+      },
+      "human_author": null
+    }
+  }
+}
