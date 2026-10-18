@@ -46,6 +46,11 @@ def _auth_secret() -> bytes:
     return path.read_text().strip().encode()
 
 
+def validate_auth_secret() -> None:
+    """Fail before a credential-changing request writes data if sessions cannot be signed."""
+    _auth_secret()
+
+
 def admin_secret() -> str | None:
     secret = current_app.config.get("ADMIN_SECRET") or os.environ.get("ADMIN_SECRET")
     return secret if secret and len(secret) >= 16 else None

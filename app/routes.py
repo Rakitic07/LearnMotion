@@ -13,8 +13,6 @@ from pathlib import Path
 from flask import Blueprint, abort, jsonify, render_template, request, send_file
 
 from . import auth, kube, pyexec, simulator, sqlrun, subjects
-from .labs import LABS
-from .topics import get_topic, topic_index
 
 bp = Blueprint("main", __name__)
 
@@ -66,12 +64,16 @@ def service_worker():
 
 @bp.get("/api/subjects")
 def subject_list():
-    return jsonify(subjects.summaries())
+    response = jsonify(subjects.summaries())
+    response.headers["Cache-Control"] = "public, max-age=300, s-maxage=86400, stale-while-revalidate=604800"
+    return response
 
 
 @bp.get("/api/search-index")
 def search_index():
-    return jsonify(subjects.search_index())
+    response = jsonify(subjects.search_index())
+    response.headers["Cache-Control"] = "public, max-age=300, s-maxage=86400, stale-while-revalidate=604800"
+    return response
 
 
 @bp.get("/api/content")
@@ -81,12 +83,16 @@ def content():
         abort(404)
     data = subjects.content(subject_id)
     if subject_id == "k8s":
+        from .labs import LABS
+
         data.update({
             "labs": LABS,
             "presets": simulator.PRESETS,
             "cluster": {"name": kube.CLUSTER_NAME, "context": kube.CONTEXT},
         })
-    return jsonify(data)
+    response = jsonify(data)
+    response.headers["Cache-Control"] = "public, max-age=300, s-maxage=86400, stale-while-revalidate=604800"
+    return response
 
 
 @bp.get("/api/sql/schema")
@@ -264,11 +270,15 @@ def music_mp3():
 
 @bp.get("/api/topics")
 def topics():
+    from .topics import topic_index
+
     return jsonify(topic_index())
 
 
 @bp.get("/api/topics/<topic_id>")
 def topic(topic_id: str):
+    from .topics import get_topic
+
     found = get_topic(topic_id)
     if not found:
         abort(404)

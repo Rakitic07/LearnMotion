@@ -22,6 +22,10 @@ function isQuotaError(error) {
   return error?.name === "QuotaExceededError" || /quota exceeded|storage quota/i.test(error?.message || "");
 }
 
+function shouldTrySmallerModel(error) {
+  return isQuotaError(error) || /out of memory|memory allocation|allocation failed|device lost|gpu memory/i.test(error?.message || "");
+}
+
 async function preloadModel(modelId) {
   try {
     const engine = await getEngine(modelId);
@@ -29,8 +33,8 @@ async function preloadModel(modelId) {
     enginePromise = null;
     return { modelId, fallback: false };
   } catch (error) {
-    if (!isQuotaError(error) || modelId !== MODEL_ID) throw error;
-    postMessage({ type: "status", text: "Browser storage is full for the larger model. Removing its partial download and trying a smaller model…" });
+    if (!shouldTrySmallerModel(error) || modelId !== MODEL_ID) throw error;
+    postMessage({ type: "status", text: "The larger tutor model exceeded this device's available storage or GPU memory. Removing its partial download and trying the smaller model…" });
     enginePromise = null;
     try {
       const { deleteModelAllInfoInCache } = await import(WEBLLM_URL);

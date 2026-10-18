@@ -512,8 +512,10 @@ async function route() {
   subjects = list;
   initSearch(subjects, STATIC);
   initChat();
-  await initAccount(subjects, { onChange: route });
   window.addEventListener("hashchange", route);
+  // Account state can require a round trip to Neon; don't hold the lesson UI
+  // behind it. The account button and sync state update when that request ends.
+  void initAccount(subjects, { onChange: route }).catch((err) => console.error("Account initialization failed:", err));
   document.addEventListener("pointermove", (e) => {
     const card = e.target.closest?.(".spot");
     if (!card) return;

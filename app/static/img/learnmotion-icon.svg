@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#12344a"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#8ed8ff"/>
+      <stop offset="1" stop-color="#3987f5"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="62" fill="url(#bg)"/>
+  <g fill="url(#tile)">
+    <rect x="36" y="36" width="82" height="82" rx="24"/>
+    <rect x="138" y="36" width="82" height="82" rx="24"/>
+    <rect x="36" y="138" width="82" height="82" rx="24"/>
+    <rect x="138" y="138" width="82" height="82" rx="24"/>
+  </g>
+  <g fill="#f4fbff">
+    <circle cx="62" cy="62" r="8"/><circle cx="92" cy="62" r="8"/>
+    <circle cx="62" cy="92" r="8"/><circle cx="92" cy="92" r="8"/>
+    <circle cx="164" cy="62" r="8"/><circle cx="194" cy="62" r="8"/>
+    <circle cx="164" cy="92" r="8"/><circle cx="194" cy="92" r="8"/>
+    <circle cx="62" cy="164" r="8"/><circle cx="92" cy="164" r="8"/>
+    <circle cx="62" cy="194" r="8"/><circle cx="92" cy="194" r="8"/>
+    <circle cx="164" cy="164" r="8"/><circle cx="194" cy="164" r="8"/>
+    <circle cx="164" cy="194" r="8"/><circle cx="194" cy="194" r="8"/>
+  </g>
+</svg>

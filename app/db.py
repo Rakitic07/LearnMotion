@@ -85,8 +85,21 @@ def days_ago(n: int) -> str:
     return d.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
+def _database_urls() -> list[str]:
+    candidates = (
+        current_app.config.get("DATABASE_URL"),
+        os.environ.get("DATABASE_URL"),
+        os.environ.get("POSTGRES_URL"),
+        os.environ.get("POSTGRES_URL_NON_POOLING"),
+        os.environ.get("DATABASE_URL_UNPOOLED"),
+        os.environ.get("NEON_DATABASE_URL"),
+    )
+    return list(dict.fromkeys(value.strip() for value in candidates if value and value.strip()))
+
+
 def database_url() -> str | None:
-    return current_app.config.get("DATABASE_URL") or os.environ.get("DATABASE_URL") or os.environ.get("POSTGRES_URL")
+    urls = _database_urls()
+    return urls[0] if urls else None
 
 
 def default_path() -> str:
@@ -133,19 +146,30 @@ class HybridRow(dict):
 
 
 def _hybrid_row(cursor):
+    # DDL and other commands without a result set have no description. Psycopg
+    # still asks the configured row factory for a maker while those statements
+    # run, so return the default tuple shape until a query supplies columns.
+    if cursor.description is None:
+        return lambda values: values
     columns = [column.name for column in cursor.description]
     return lambda values: HybridRow(zip(columns, values))
 
 
 def connect(path: str | None = None):
-    url = database_url()
-    if url:
+    urls = _database_urls()
+    if urls:
         try:
             import psycopg
         except ImportError as exc:
             raise RuntimeError("DATABASE_URL is set, but psycopg is missing. Install requirements.txt.") from exc
-        raw = psycopg.connect(_postgres_url(url), row_factory=_hybrid_row, connect_timeout=10)
-        return PostgresConnection(raw)
+        failures = []
+        for url in urls:
+            try:
+                raw = psycopg.connect(_postgres_url(url), row_factory=_hybrid_row, connect_timeout=10)
+                return PostgresConnection(raw)
+            except psycopg.Error as exc:
+                failures.append(exc)
+        raise failures[-1]
 
     if os.environ.get("VERCEL"):
         raise RuntimeError("DATABASE_URL is required on Vercel. Connect a PostgreSQL storage integration and set DATABASE_URL.")
@@ -186,7 +210,18 @@ def get():
             if not database_url() and os.environ.get("VERCEL"):
                 message = "Database is not configured. Add DATABASE_URL to the Vercel project's environment variables."
             else:
-                message = "Database is unavailable. Check the Vercel DATABASE_URL and the database provider's connection settings."
+                sqlstate = getattr(exc, "sqlstate", None)
+                detail = " ".join(str(exc).split())
+                detail = re.sub(r"(?i)(postgres(?:ql)?://)[^@\s]+@", r"\1***@", detail)
+                detail = re.sub(r"(?i)(password\s*[=:]\s*)[^\s,;]+", r"\1***", detail)
+                detail = detail[:180]
+                reason = f" {type(exc).__name__}" + (f" (SQLSTATE {sqlstate})" if sqlstate else "")
+                if detail:
+                    reason += f": {detail}"
+                message = (
+                    f"Database is unavailable.{reason}. Check the Vercel database URL and Neon connection settings. "
+                    "See Vercel Function Logs for the full traceback."
+                )
             raise DatabaseUnavailable(message) from exc
         g.db = conn
     return g.db

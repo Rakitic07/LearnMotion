@@ -101,7 +101,7 @@ def metrics():
         "SELECT detail, COUNT(*) AS n FROM events WHERE type = 'view_tab' AND created_at >= ? GROUP BY detail ORDER BY n DESC", (d30,),
     ).fetchall()
     searches = conn.execute(
-        "SELECT detail, COUNT(*) AS n FROM events WHERE type = 'search' AND created_at >= ? AND detail IS NOT NULL "
+        "SELECT MIN(detail) AS detail, COUNT(*) AS n FROM events WHERE type = 'search' AND created_at >= ? AND detail IS NOT NULL "
         "GROUP BY lower(detail) ORDER BY n DESC LIMIT 10", (d30,),
     ).fetchall()
     recent = conn.execute(

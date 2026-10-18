@@ -1,12 +1,10 @@
-const CACHE_NAME = "learnmotion-shell-v1";
+const CACHE_NAME = "learnmotion-shell-v3";
 const APP_SHELL = [
   "/",
-  "/static/manifest.webmanifest",
-  "/static/img/pwa-192.png",
-  "/static/img/pwa-512.png",
-  "/static/img/pwa-maskable-512.png",
+  "/static/manifest-v2.webmanifest",
+  "/static/img/learnmotion-icon.svg",
   "/static/img/apple-touch-icon.png",
-  "/static/img/learnmotion-share.png",
+  "/static/img/learnmotion-whatsapp-v2.png",
 ];
 
 self.addEventListener("install", (event) => {

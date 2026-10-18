@@ -518,7 +518,7 @@ export async function initAccount(subjectList, { onChange: changed } = {}) {
   if (res.authenticated && res.user) {
     setUser(res.user);
     await Promise.all([syncDown(), loadSettings()]);
-  } else {
+  } else if (res.status === 200) {
     clearLocalSettings();
   }
 }

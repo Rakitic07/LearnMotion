@@ -28,11 +28,11 @@ Set these variables in Vercel **Settings → Environment Variables** for Product
 - `ADMIN_SECRET`: optional admin panel password (16+ characters).
 - `OPENROUTER_API_KEY`: optional server-side live tutor key.
 
-Vercel detects the Flask application through the root `index.py` entrypoint. The included `vercel.json` runs a quick Python syntax compilation as the build command; it overrides any dashboard build command, so Vercel will not try to run the local development server. Deploy from the repository root. Vercel's filesystem is ephemeral, so its account data is stored in PostgreSQL; local `LEARNMOTION_DB` SQLite files are not automatically migrated. The local Kubernetes cluster and `kubectl` management API are disabled on Vercel because those controls operate on a machine-local cluster.
+Vercel detects the Flask application through the root `index.py` entrypoint. The included `vercel.json` runs `scripts/vercel_build.py` to prepare CDN assets and compact subject summaries; it overrides any dashboard build command, so Vercel will not try to run the local development server. Deploy from the repository root. Vercel's filesystem is ephemeral, so its account data is stored in PostgreSQL; local `LEARNMOTION_DB` SQLite files are not automatically migrated. The local Kubernetes cluster and `kubectl` management API are disabled on Vercel because those controls operate on a machine-local cluster.
 
 ### Installable PWA and link previews
 
-LearnMotion includes a web app manifest, install support in compatible browsers, an offline-cached app shell, and a 1200×630 Open Graph thumbnail for WhatsApp and other link previews. The API and lesson data still need the app server to be online. Link previews work only from a publicly reachable HTTPS URL; set `PUBLIC_APP_URL` to that canonical URL when serving through an approved public host. The included local-only server cannot be shared with other people over the internet.
+LearnMotion includes a web app manifest, install support in compatible browsers, an offline-cached app shell, and a 1200×750 screenshot thumbnail for WhatsApp and other link previews. The API and lesson data still need the app server to be online. Link previews work only from a publicly reachable HTTPS URL; set `PUBLIC_APP_URL` to that canonical URL when serving through an approved public host. The included local-only server cannot be shared with other people over the internet.
 
 ### Browser mini tutor
 

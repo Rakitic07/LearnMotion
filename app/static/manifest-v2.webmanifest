@@ -1,0 +1,17 @@
+{
+  "id": "/",
+  "name": "LearnMotion — Learn by doing",
+  "short_name": "LearnMotion",
+  "description": "Interactive lessons, hands-on labs, games and puzzles across technology, music and design.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#0b0d17",
+  "theme_color": "#0b0d17",
+  "categories": ["education", "productivity"],
+  "icons": [
+    { "src": "/static/img/learnmotion-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

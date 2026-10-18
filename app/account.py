@@ -93,6 +93,7 @@ def _user_by_name(name: str):
 def register():
     if (blocked := _limited("register")):
         return blocked
+    auth.validate_auth_secret()
     body = _body()
     name, passphrase = _name(body), _passphrase(body)
     conn = db.get()
@@ -112,6 +113,7 @@ def register():
 def login():
     if (blocked := _limited("login")):
         return blocked
+    auth.validate_auth_secret()
     body = _body()
     name = " ".join(str(body.get("name", "")).split())
     passphrase = str(body.get("passphrase", ""))[:128]
@@ -128,6 +130,7 @@ def login():
 def recover():
     if (blocked := _limited("recover")):
         return blocked
+    auth.validate_auth_secret()
     body = _body()
     name = " ".join(str(body.get("name", "")).split())
     code = auth.normalize_code(_text(body.get("recoveryCode"), 64))

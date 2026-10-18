@@ -48,10 +48,14 @@ function refreshChatAvailability() {
   }
   const notice = $("#chatLiveNotice");
   if (notice) notice.hidden = !liveMode();
-  setChatReady(Boolean(context.sid) && (liveMode() || (modelCached && Boolean(navigator.gpu))));
+  const retry = $("#chatRetrySetup");
+  if (retry && liveMode()) retry.hidden = true;
+  // Lesson context is optional: the tutor can still answer general questions
+  // from the home page or when no subject is selected.
+  setChatReady(liveMode() || (modelCached && Boolean(navigator.gpu)));
   if (!root?.hidden) {
     if (liveMode()) setChatStatus("Live mode uses OpenRouter's free model router and checks Wikipedia for current facts. Lesson context and chat messages are sent to the provider.");
-    else if (modelCached && navigator.gpu) setChatStatus("Tutor is prepared for this browser. Questions run on this device.");
+    else if (modelCached && navigator.gpu) setChatStatus(context.sid ? "Tutor is prepared for this browser. Questions run on this device." : "Tutor is ready for general questions. Open a subject to add lesson context.");
     else if (!navigator.gpu) setChatStatus("This browser does not expose WebGPU, which the local mini model needs.");
     else if (prefetching) setChatStatus("Preparing the tutor in the background after sign-in. You can ask as soon as setup finishes.");
     else setChatStatus("Sign in to prepare the local tutor, or enable Live mode to use OpenRouter.");
@@ -67,9 +71,9 @@ export function setChatContext(sid, topic, subjectName = "", lesson = null) {
   }
   context = next;
   const title = $("#chatTitle");
-  if (title) title.textContent = topic ? "Ask about this chapter" : `Ask about ${subjectName || "this subject"}`;
+  if (title) title.textContent = topic ? "Ask about this chapter" : subjectName ? `Ask about ${subjectName}` : "Ask LearnMotion";
   const label = $("#chatContextLabel");
-  if (label) label.textContent = topic ? `Using the current ${subjectName} chapter` : subjectName ? `Using ${subjectName} lesson context` : "Choose a subject to give the tutor context.";
+  if (label) label.textContent = topic ? `Using the current ${subjectName} chapter` : subjectName ? `Using ${subjectName} lesson context` : "General LearnMotion tutor · open a subject for lesson context.";
   refreshChatAvailability();
 }
 
@@ -371,16 +375,15 @@ async function show() {
   root.hidden = false;
   document.body.classList.add("gs-locked");
   $("#chatInput").focus();
-  if (!context.sid) setChatStatus("Open a subject or chapter to give the tutor lesson context.");
-  else if (liveMode()) setChatStatus("Live mode uses OpenRouter's free model router and checks Wikipedia for current facts. Lesson context and chat messages are sent to the provider.");
+  if (liveMode()) setChatStatus("Live mode uses OpenRouter's free model router and checks Wikipedia for current facts. Lesson context and chat messages are sent to the provider.");
+  else if (modelCached && navigator.gpu) setChatStatus(context.sid ? "Tutor is prepared for this browser. Questions run on this device." : "Tutor is ready for general questions. Open a subject to add lesson context.");
   else if (!navigator.gpu) setChatStatus("This browser does not expose WebGPU, which the mini model needs to run.");
   else if (prefetching) setChatStatus("Preparing the tutor in the background after sign-in. You can ask as soon as setup finishes.");
   else if (prefetchError) setChatStatus(`Background setup failed: ${prefetchErrorMessage}`);
-  else if (modelCached) setChatStatus("Tutor is prepared for this browser. Questions run on this device.");
   else setChatStatus("Sign in to prepare the tutor in the background on this browser.");
-  setChatReady(Boolean(context.sid) && (liveMode() || (modelCached && Boolean(navigator.gpu))));
+  setChatReady(liveMode() || (modelCached && Boolean(navigator.gpu)));
   const retry = $("#chatRetrySetup");
-  if (retry) retry.hidden = !prefetchError || !signedIn;
+  if (retry) retry.hidden = !prefetchError || !signedIn || liveMode();
 }
 
 async function submit(event) {
@@ -388,7 +391,7 @@ async function submit(event) {
   if (busy) return;
   const input = $("#chatInput");
   const question = input.value.trim();
-  if (!question || !context.sid) return;
+  if (!question) return;
   const live = liveMode();
   if (!live && !modelCached) {
     setChatStatus(prefetching ? "The tutor is still preparing in the background. Try again when setup finishes." : "The tutor has not been prepared for this browser yet.");
@@ -419,13 +422,14 @@ async function submit(event) {
     setChatStatus("Date read from this device's local clock.");
     return;
   }
-  const lessonText = JSON.stringify(context.lesson || { subject: context.subjectName });
+  const lessonContext = context.lesson || (context.subjectName ? { subject: context.subjectName } : { scope: "general LearnMotion guidance; no subject or chapter is selected" });
+  const lessonText = JSON.stringify(lessonContext);
   try {
     if (live) {
       const response = await fetch("/api/chat/live", {
         method: "POST",
         headers: { "Content-Type": "application/json", "X-K8s-Playground": "1" },
-        body: JSON.stringify({ subject: context.subjectName, lesson: context.lesson || {}, messages: turns.slice(-12) }),
+        body: JSON.stringify({ subject: context.subjectName, lesson: lessonContext, messages: turns.slice(-12) }),
       });
       const payload = await response.json().catch(() => ({}));
       if (!response.ok || !payload.ok) throw new Error(payload.error || `Live chat failed (${response.status}).`);
@@ -483,7 +487,7 @@ async function submit(event) {
       currentReply = null;
       busy = false;
       $("#chatSend").disabled = false;
-      setChatStatus("Live mode could not complete. Local tutor setup is unchanged.");
+      setChatStatus(`Live chat failed: ${message}`);
     } else handleWorkerMessage({ data: { type: "error", text: error?.message } });
   }
 }
@@ -501,7 +505,7 @@ export function initChat() {
       <p id="chatLiveNotice" class="chat-live-notice muted" hidden>Live mode sends this lesson context and conversation to OpenRouter and its selected model. Your API key stays on the app server.</p>
       <button type="button" id="chatRetrySetup" class="chat-retry" hidden>Retry model setup</button>
       <div id="chatMessages" class="chat-messages" role="log" aria-live="polite" aria-label="Tutor conversation"></div>
-      <form id="chatForm" class="chat-form"><textarea id="chatInput" rows="1" maxlength="700" placeholder="What part of this chapter is confusing?" required></textarea><button class="btn primary" type="submit" id="chatSend">Ask</button></form>
+      <form id="chatForm" class="chat-form"><textarea id="chatInput" rows="1" maxlength="700" placeholder="Ask a question about LearnMotion or the current lesson…" required></textarea><button class="btn primary" type="submit" id="chatSend">Ask</button></form>
       <p class="chat-privacy muted">Local mode needs no AI key and runs in this browser. Live mode uses your server-side OpenRouter key and may be rate limited. Dates use this device's clock.</p>
     </section>`;
   document.body.append(root);

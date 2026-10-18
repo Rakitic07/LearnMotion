@@ -2,8 +2,10 @@
 
 from __future__ import annotations
 
+import json
 from functools import lru_cache
 from importlib import import_module
+from pathlib import Path
 
 from ._beginner_guides import BEGINNER_GUIDES
 
@@ -386,7 +388,7 @@ def content(subject_id: str) -> dict:
     return {"subject": _BY_ID[subject_id], "categories": mod.CATEGORIES, "topics": mod.TOPICS, "scenarios": mod.SCENARIOS}
 
 
-def summaries() -> list[dict]:
+def _build_summaries() -> list[dict]:
     out = []
     for s in SUBJECTS:
         mod = module(s["id"])
@@ -394,6 +396,17 @@ def summaries() -> list[dict]:
         out.append({**s, "topics": len(mod.TOPICS), "questions": questions,
                     "levels": sorted({t["level"] for t in mod.TOPICS}, key=["basic", "intermediate", "advanced"].index)})
     return out
+
+
+@lru_cache(maxsize=1)
+def summaries() -> list[dict]:
+    """Return build-generated subject counts without importing every lesson at runtime."""
+    manifest = Path(__file__).with_name("_summary_manifest.json")
+    try:
+        return json.loads(manifest.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        # Keep development usable if the generated manifest was removed.
+        return _build_summaries()
 
 
 def search_index() -> list[dict]:
