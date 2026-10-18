@@ -1,0 +1,52 @@
+app/static/js/account.js
+  s_a3ca92c423877c::t_b93173706ffb2e 521
+README.md
+  s_a3ca92c423877c::t_e28765e4bc17d4 35
+scripts/vercel_build.py
+  s_a3ca92c423877c::t_0b58299915b5ae 1-29
+app/routes.py
+  s_a3ca92c423877c::t_8c7a26d159155f 67-69,74-76,86-87,93-95,273-274,280-281
+app/db.py
+  s_a3ca92c423877c::t_7245e5172b374c 89-96,213,218,221,224
+  s_a3ca92c423877c::t_f5d13ba6b39561 223
+  s_a3ca92c423877c::t_c72a13b46b2a43 149-153
+  s_a3ca92c423877c::t_7e8c697edfb5ce 214-217,219-220,222
+  s_a3ca92c423877c::t_ae81dca72fd69e 88,97-99,101-102,159-160,165-172
+vercel.json
+  s_a3ca92c423877c::t_90762b02461cb6 3-9,11-23
+  s_a3ca92c423877c::t_f4fd66b4617402 10
+app/static/sw.js
+  s_a3ca92c423877c::t_e28765e4bc17d4 1,9
+app/subjects/__init__.py
+  s_a3ca92c423877c::t_b3ca7f23b57d66 5,8,391,401-409
+  s_a3ca92c423877c::t_3cf9849cb79076 410-411
+app/subjects/_summary_manifest.json
+  s_a3ca92c423877c::t_2f48f2167f1b17 1
+app/static/js/app.js
+  s_a3ca92c423877c::t_b93173706ffb2e 516-518
+app/templates/index.html
+  s_a3ca92c423877c::t_e28765e4bc17d4 24-25,28-29,33
+.gitignore
+  s_a3ca92c423877c::t_90762b02461cb6 9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "040146b20111546d18c8d2527846e8077059fe96",
+  "prompts": {},
+  "humans": {
+    "h_a373eedd7fd2e3": {
+      "author": "rakbiswa <rakbiswa@cisco.com>"
+    }
+  },
+  "sessions": {
+    "s_a3ca92c423877c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a14b16-6ac7-72a3-a9f7-937b7b2f2d49",
+        "model": "gpt-6-luna"
+      },
+      "human_author": null
+    }
+  }
+}
