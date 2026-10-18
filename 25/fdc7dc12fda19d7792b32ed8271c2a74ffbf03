@@ -1,0 +1,25 @@
+app/static/js/chat.js
+  s_a3ca92c423877c::t_38ef9e16bfe49b 15,18,25,28-31
+  s_a3ca92c423877c::t_30d5d945369b4d 182-185,195-196,199,207-222,224-225,227-234,237-241,252-253,256,276
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "25fdc7dc12fda19d7792b32ed8271c2a74ffbf03",
+  "prompts": {},
+  "humans": {
+    "h_a373eedd7fd2e3": {
+      "author": "rakbiswa <rakbiswa@cisco.com>"
+    }
+  },
+  "sessions": {
+    "s_a3ca92c423877c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a14b16-6ac7-72a3-a9f7-937b7b2f2d49",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "rakbiswa <rakbiswa@cisco.com>"
+    }
+  }
+}
