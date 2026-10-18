@@ -1,0 +1,24 @@
+# Local learning cluster: 1 control-plane + 3 workers.
+# Node labels/taints are applied by scripts/setup_cluster.sh so they work on every kind version.
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: k8s-playground
+nodes:
+  - role: control-plane
+    kubeadmConfigPatches:
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            node-labels: "ingress-ready=true"
+    extraPortMappings:
+      # ingress-nginx is reachable on http://localhost:8081 and https://localhost:8443
+      - containerPort: 80
+        hostPort: 8081
+        protocol: TCP
+      - containerPort: 443
+        hostPort: 8443
+        protocol: TCP
+  - role: worker
+  - role: worker
+  - role: worker

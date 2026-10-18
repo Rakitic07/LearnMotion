@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" data-theme="midnight" data-style="clay" data-base="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin · LearnMotion</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/app-logo.png') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/clay.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/subjects.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/account.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+  <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+</head>
+<body class="admin-body">
+  <header class="topbar">
+    <a class="brand" href="/">
+      <span class="brand-logo clay"><img src="{{ url_for('static', filename='img/app-logo.png') }}" alt="" width="30" height="30"></span>
+      <span><span class="ad-brand-text"><b>Learn</b>Motion </span><span class="ad-badge">Admin</span></span>
+    </a>
+    <nav class="ad-tabs" id="adTabs" hidden>
+      <button type="button" data-tab="overview" class="on">Overview</button>
+      <button type="button" data-tab="users">Users</button>
+      <button type="button" data-tab="activity">Activity</button>
+      <button type="button" data-tab="feedback">Feedback <span class="ad-count" id="adFbCount"></span></button>
+      <button type="button" data-tab="recovery">Recovery <span class="ad-count" id="adRrCount"></span></button>
+    </nav>
+    <div class="topbar-right">
+      <button type="button" class="btn small" id="adRefresh" hidden>Refresh</button>
+      <button type="button" class="btn small" id="adLogout" hidden>Lock</button>
+      <div class="theme-wrap">
+        <button type="button" class="btn theme-btn" id="themeBtn" title="Theme" aria-haspopup="true" aria-expanded="false"><span class="swatch-dot"></span></button>
+        <div class="theme-pop clay" id="themePop" hidden></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="view ad-view" id="adView"><div class="loading clay">Loading…</div></main>
+  <div id="toast" class="toast clay" hidden></div>
+  <script type="module" src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</body>
+</html>
