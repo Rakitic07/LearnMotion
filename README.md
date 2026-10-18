@@ -18,7 +18,7 @@ The server binds to `127.0.0.1` only. Override the port with `PORT=6000 make run
 
 ### Deploy to Vercel with persistent accounts
 
-The app uses SQLite for local development and PostgreSQL when `DATABASE_URL` is set. For Vercel, connect a PostgreSQL provider from the Vercel Marketplace (for example Neon or Supabase); its connection URL should be available as `DATABASE_URL` (the app also accepts `POSTGRES_URL`). Use the provider's pooled/serverless connection URL when it offers one. The app creates its account, progress, activity, feedback, and reset-request tables on startup.
+The app uses SQLite for local development and PostgreSQL when `DATABASE_URL` is set. For Vercel, connect a PostgreSQL provider from the Vercel Marketplace (for example Neon or Supabase); its connection URL should be available as `DATABASE_URL` (the app also accepts `POSTGRES_URL`). Use the provider's pooled/serverless connection URL when it offers one. The app initializes its account, progress, activity, feedback, and reset-request tables on the first database-backed request. If the database is not configured, the public page remains available and account APIs return a clear service-unavailable response.
 
 Set these variables in Vercel **Settings → Environment Variables** for Production and Preview (and Development if using `vercel dev`):
 

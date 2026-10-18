@@ -3,10 +3,11 @@
 import os
 import re
 import sqlite3
+import threading
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from flask import current_app, g
+from flask import current_app, g, jsonify
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS users (
@@ -69,6 +70,10 @@ CREATE INDEX IF NOT EXISTS reset_status ON reset_requests(status, created_at);
 """
 
 POSTGRES_SCHEMA = SCHEMA.replace("INTEGER PRIMARY KEY AUTOINCREMENT", "BIGSERIAL PRIMARY KEY")
+
+
+class DatabaseUnavailable(RuntimeError):
+    """Raised when persistent storage is missing or cannot be initialized."""
 
 
 def now() -> str:
@@ -166,7 +171,24 @@ def _initialize(conn) -> None:
 
 def get():
     if "db" not in g:
-        g.db = connect(current_app.config.get("DB_PATH"))
+        conn = None
+        try:
+            conn = connect(current_app.config.get("DB_PATH"))
+            state = current_app.extensions["learnmotion_db"]
+            with state["lock"]:
+                if not state["ready"]:
+                    _initialize(conn)
+                    state["ready"] = True
+        except Exception as exc:
+            if conn is not None:
+                conn.close()
+            current_app.logger.exception("LearnMotion database connection or initialization failed")
+            if not database_url() and os.environ.get("VERCEL"):
+                message = "Database is not configured. Add DATABASE_URL to the Vercel project's environment variables."
+            else:
+                message = "Database is unavailable. Check the Vercel DATABASE_URL and the database provider's connection settings."
+            raise DatabaseUnavailable(message) from exc
+        g.db = conn
     return g.db
 
 
@@ -179,12 +201,22 @@ def close(_exc=None) -> None:
 def init_app(app) -> None:
     app.config.setdefault("DB_PATH", None)
     app.config.setdefault("DATABASE_URL", os.environ.get("DATABASE_URL") or os.environ.get("POSTGRES_URL"))
+    app.extensions["learnmotion_db"] = {"ready": False, "lock": threading.Lock()}
+
+    @app.errorhandler(DatabaseUnavailable)
+    def handle_database_unavailable(exc):
+        return jsonify({"ok": False, "error": str(exc)}), 503
+
     with app.app_context():
-        if not app.config["DB_PATH"] and not app.config["DATABASE_URL"]:
-            if os.environ.get("VERCEL"):
-                raise RuntimeError("DATABASE_URL is required on Vercel. Connect a PostgreSQL storage integration and set DATABASE_URL.")
-            app.config["DB_PATH"] = default_path()
-        conn = connect(app.config.get("DB_PATH"))
-        _initialize(conn)
-        conn.close()
+        if not app.config["DATABASE_URL"] and not os.environ.get("VERCEL"):
+            if not app.config["DB_PATH"]:
+                app.config["DB_PATH"] = default_path()
+            conn = connect(app.config["DB_PATH"])
+            try:
+                _initialize(conn)
+                app.extensions["learnmotion_db"]["ready"] = True
+            finally:
+                conn.close()
+        elif not app.config["DATABASE_URL"]:
+            app.logger.warning("DATABASE_URL is missing on Vercel; database-backed routes will be unavailable")
     app.teardown_appcontext(close)
