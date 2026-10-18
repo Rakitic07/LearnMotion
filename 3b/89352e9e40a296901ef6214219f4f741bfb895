@@ -1,0 +1,27 @@
+README.md
+  s_a3ca92c423877c::t_02a720f0516089 21
+app/db.py
+  s_a3ca92c423877c::t_e6a885974c33f5 212-213
+  s_a3ca92c423877c::t_f58f23973ec3ed 6,10,75-78,174-191,204-209,211,214-221
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3b89352e9e40a296901ef6214219f4f741bfb895",
+  "prompts": {},
+  "humans": {
+    "h_a373eedd7fd2e3": {
+      "author": "rakbiswa <rakbiswa@cisco.com>"
+    }
+  },
+  "sessions": {
+    "s_a3ca92c423877c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a14b16-6ac7-72a3-a9f7-937b7b2f2d49",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "rakbiswa <rakbiswa@cisco.com>"
+    }
+  }
+}
