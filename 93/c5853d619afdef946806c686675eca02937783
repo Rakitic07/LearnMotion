@@ -1,0 +1,586 @@
+app/subjects/theory.py
+  s_a3ca92c423877c::t_c31c1fd86cb712 1-4
+app/subjects/_catalog.py
+  s_a3ca92c423877c::t_e6d553238e465b 3-4,6-40,52,79
+  s_a3ca92c423877c::t_dcf0dc7afbd16d 88-97
+  s_a3ca92c423877c::t_f33f8b7666d1b5 1-2,5,41-51,53-78,80-87
+app/subjects/music_catalog.py
+  s_a3ca92c423877c::t_69eab7eb50e66f 56-63,80-90
+  s_a3ca92c423877c::t_faeb7bbd978807 16
+  s_a3ca92c423877c::t_9183c1de42f64b 1-15,17-55,64-79,91-110
+app/static/js/gamedata/nginx.js
+  s_a3ca92c423877c::t_4c446f04cf195d 1-19
+app/static/js/landing.js
+  s_a3ca92c423877c::t_46a5334f40f295 91-92,96-105,109-113,115-116,118,120,122-129,136,156-161,263,294
+  s_a3ca92c423877c::t_fa278851e390ac 114
+  s_a3ca92c423877c::t_cd693a70a001eb 172-176,181,198,237-241,264-285,287
+  s_a3ca92c423877c::t_182793bc1a03ae 220,303
+  s_a3ca92c423877c::t_a7d163239c5373 166
+  s_a3ca92c423877c::t_17a2bf7af7c93d 1-90,93-95,130-135,137-155,162-165,199-207,210-219,221-235,243-252,259-262,286,288-293,295-298,300-302,304,306-313
+  s_a3ca92c423877c::t_6e66f273a7198a 253-258
+  s_a3ca92c423877c::t_d6a7b9ef47b3d0 106-108,117,119,121
+  s_a3ca92c423877c::t_990b789690df17 208
+  s_a3ca92c423877c::t_d6253e94541c96 167-171,177-180,182-196,209,236,242
+  s_a3ca92c423877c::t_283019b044d003 299,305
+  s_a3ca92c423877c::t_d59dec8174b05d 197
+app/templates/index.html
+  s_a3ca92c423877c::t_c6168351c89c8a 52-55
+  s_a3ca92c423877c::t_9408c836dca51b 57-59
+  s_a3ca92c423877c::t_cb8fa89be73f43 16
+  s_a3ca92c423877c::t_310b498e607983 1-8,34-51,61-76,82-92,94-95
+  s_a3ca92c423877c::t_625bf72629e08d 77-81
+  s_a3ca92c423877c::t_9044659340ed7a 56
+  s_a3ca92c423877c::t_412489ec8cf830 9-15,17-33,60,93
+app/static/js/labs/devops_catalog.js
+  s_a3ca92c423877c::t_c1fbddc04f5ebb 1-9
+app/subjects/piano.py
+  s_a3ca92c423877c::t_c31c1fd86cb712 1-4
+app/static/js/gamedata/voice.js
+  s_a3ca92c423877c::t_d870a0c7842e93 1
+app/subjects/sonarqube.py
+  s_a3ca92c423877c::t_e301319aac951c 3,34
+  s_a3ca92c423877c::t_7c3c39be761566 1-2,4-33,35
+app/static/js/gamedata/music.js
+  s_a3ca92c423877c::t_2d8ce766a2cb69 1-19
+app/subjects/__init__.py
+  s_a3ca92c423877c::t_62280ea9a50842 8-9,360-361
+  s_a3ca92c423877c::t_b001e973fc825c 187
+  s_a3ca92c423877c::t_3bf1472306463f 319-342
+  s_a3ca92c423877c::t_9df48162eb1de1 406-409,413
+  s_a3ca92c423877c::t_6180bc3609fe0f 1-7,10-186,188-270,359,369-405,414,416
+  s_a3ca92c423877c::t_5d9e015e422944 343-358,363-368
+  s_a3ca92c423877c::t_7e4e9c6a06badf 271-310,362
+  s_a3ca92c423877c::t_fdbdb270d6646c 410-412,415
+  s_a3ca92c423877c::t_f0fc867bdf0588 311-318
+app/static/js/labs/sonarqube_builder.js
+  s_a3ca92c423877c::t_f223b038f718c1 6,12
+  s_a3ca92c423877c::t_f1464a9e804521 2-5,7-11,13-23,28-32
+  s_a3ca92c423877c::t_199f854f676a59 1,27
+  s_a3ca92c423877c::t_dbb436e67ce95d 24-26
+app/static/js/labs/theory.js
+  s_a3ca92c423877c::t_bcb75fa0f894a3 1
+app/static/js/gamedata/react.js
+  s_a3ca92c423877c::t_2b3c876a334356 1
+app/static/js/labs/helm.js
+  s_a3ca92c423877c::t_c1fbddc04f5ebb 1-3
+app/static/js/labs/guitar.js
+  s_a3ca92c423877c::t_bcb75fa0f894a3 1
+app/subjects/ansible.py
+  s_a3ca92c423877c::t_bdcab2871e8d4c 1-86
+app/static/js/labs/react.js
+  s_a3ca92c423877c::t_0ffa1cfc0484e8 1,34
+  s_a3ca92c423877c::t_c87e353d193046 2-33,35-38
+app/static/js/labs/css.js
+  s_a3ca92c423877c::t_2808fb8752739a 36-38,53-64,66-67,70-71
+  s_a3ca92c423877c::t_0ffa1cfc0484e8 72
+  s_a3ca92c423877c::t_6ac42508a17a99 1,6-24,26-32
+  s_a3ca92c423877c::t_bb77d14fdc9cb9 25
+  s_a3ca92c423877c::t_d2ed070031007a 2-5,33-35,39-52,65,68-69,73-84
+app/static/js/labs/music.js
+  s_a3ca92c423877c::t_66788309e9530d 341
+  s_a3ca92c423877c::t_552ce39a962e9d 467,469-472,474-485,494-521,523-526,528-536,538-543,546-553,555,557-567,569,571-572
+  s_a3ca92c423877c::t_b3d2f69de36c5c 1,56-57,59-60,62-69,116-117,121-122,126-127,130-138,145-157,159-161,163,165,167-178,187-200,202-211,213-215,217-225,227-233,235-240,298-299,301-302,308,415-417,423-424,426-465
+  s_a3ca92c423877c::t_7614484abdae6a 61,123,128
+  s_a3ca92c423877c::t_f75b1d2390a678 70-98,100-105,108-115
+  s_a3ca92c423877c::t_18d833e5fb590c 107,244
+  s_a3ca92c423877c::t_fcef1f239217f3 162,164,166,179
+  s_a3ca92c423877c::t_32760a48bca99a 343-346,348-349,351-353
+  s_a3ca92c423877c::t_3868fbd0c034ef 405,419
+  s_a3ca92c423877c::t_b6e29c527095b2 486-493,545,556
+  s_a3ca92c423877c::t_ec56cc329894c2 58
+  s_a3ca92c423877c::t_daef7933d57a2c 522
+  s_a3ca92c423877c::t_c2654dd5ef397f 527,537,544,554
+  s_a3ca92c423877c::t_2dc26fefeda894 568
+  s_a3ca92c423877c::t_cd4d1ac0635ec3 99,106,354
+  s_a3ca92c423877c::t_03e4d7d0018b64 247-284
+  s_a3ca92c423877c::t_e8aeddef955618 466,570,573
+  s_a3ca92c423877c::t_bb067acc28654d 36-55
+  s_a3ca92c423877c::t_6084dcbe359989 2-6,19-26,118
+  s_a3ca92c423877c::t_1ddb3301fa4ce7 120,125,129
+  s_a3ca92c423877c::t_fb1d562c4a3334 139-144,158,216,226,234
+  s_a3ca92c423877c::t_6e4c9df8b4a9e0 180-186,201,212
+  s_a3ca92c423877c::t_483b3d18ad2d13 7-18
+  s_a3ca92c423877c::t_9ac602ceab3b60 332,347,350,408,410,420-421,425
+  s_a3ca92c423877c::t_10ab528245a9db 468,473
+  s_a3ca92c423877c::t_01e5a4a31b8771 241-242,245-246,285-293,295,297,303-307,309-312,314-328,330-331,333-340,342,355-404,406-407,409,411-414,418,422
+  s_a3ca92c423877c::t_13c92e35f76983 27-35,119,124
+  s_a3ca92c423877c::t_b245834abbbf17 243,294,296,300,313,329
+app/static/js/util.js
+  s_a3ca92c423877c::t_4f897c69cbf61b 175-180
+  s_a3ca92c423877c::t_6af39e11b37563 213,215-221,223-224,227-228,230,232
+  s_a3ca92c423877c::t_a101c1e4e3e52f 1-118,120-169,181-199,211-212,233,236-254,257-276
+  s_a3ca92c423877c::t_0c633948754ac5 229,231,234
+  s_a3ca92c423877c::t_261deb506d04f8 119,170-174,214,222,225-226,255-256
+  s_a3ca92c423877c::t_92bd6f5022edc8 200-210,235
+app/static/js/gamedata/ansible.js
+  s_a3ca92c423877c::t_53a0ea0affe064 1-4
+app/subjects/helm.py
+  s_a3ca92c423877c::t_2c583bd09f7883 1-74
+app/static/js/gamedata/drums.js
+  s_a3ca92c423877c::t_2d8ce766a2cb69 1
+app/static/js/labs/artifactory.js
+  s_a3ca92c423877c::t_c1fbddc04f5ebb 1-3
+app/static/js/gamedata/violin.js
+  s_a3ca92c423877c::t_2d8ce766a2cb69 1
+app/static/js/labs/go.js
+  s_a3ca92c423877c::t_63a72d932d5c68 1-19
+app/subjects/_subject_coverage.py
+  s_a3ca92c423877c::t_de2027e1eaf607 1-136
+app/static/js/chat-worker.js
+  s_a3ca92c423877c::t_f956a46ae37d74 63-64
+  s_a3ca92c423877c::t_a9475729c66142 3-5,7-9,11-20,48,52,60-62,65-70,72,77-78
+  s_a3ca92c423877c::t_69c48bd970c773 2,6,10,21-47,51,55-56,59
+  s_a3ca92c423877c::t_876308f6cd4854 1,49-50,53-54,57-58,71
+  s_a3ca92c423877c::t_0bd94660fc4a48 73-76
+app/subjects/react.py
+  s_a3ca92c423877c::t_e301319aac951c 3,34
+  s_a3ca92c423877c::t_27c6dc6ea4f958 1-2,4-33,35
+app/static/js/account.js
+  s_a3ca92c423877c::t_69aed467564cdc 1-117,119-524
+  s_a3ca92c423877c::t_b4c9deb0740f0f 118
+app/static/js/gamedata/javascript.js
+  s_a3ca92c423877c::t_ae4874813bb339 1-19
+app/static/manifest.webmanifest
+  s_a3ca92c423877c::t_8a397a11600bdf 1-19
+app/subjects/sysdesign_more.py
+  s_a3ca92c423877c::t_0ff3939569d7dd 1-2963,2965-2991,2993-3013
+  s_a3ca92c423877c::t_aa61d489c9e287 2964
+  s_a3ca92c423877c::t_15c89c22f72b86 2992
+app/static/js/labs/nginx.js
+  s_a3ca92c423877c::t_3df3af6c99511f 1-43
+app/static/js/labs/piano.js
+  s_a3ca92c423877c::t_bcb75fa0f894a3 1
+app/static/sw.js
+  s_a3ca92c423877c::t_e1f021e7f03b57 30-38,43-51
+  s_a3ca92c423877c::t_8a397a11600bdf 1-29,39-42,52-53
+index.py
+  s_a3ca92c423877c::t_b14e35f7a7e509 1-5
+app/static/js/gamedata/argocd.js
+  s_a3ca92c423877c::t_53a0ea0affe064 1-4
+app/account.py
+  s_a3ca92c423877c::t_b14e35f7a7e509 1-351
+app/static/js/labs/ansible.js
+  s_a3ca92c423877c::t_c1fbddc04f5ebb 1-3
+app/static/css/subjects.css
+  s_a3ca92c423877c::t_f869be132b3ea4 376-378
+  s_a3ca92c423877c::t_f56bfcbc636f2c 774,815
+  s_a3ca92c423877c::t_288240d8b02335 65-82,85-94
+  s_a3ca92c423877c::t_02e64a2c51c9bb 771,823
+  s_a3ca92c423877c::t_ff3686220a6303 53-58,272,290,349,353,358
+  s_a3ca92c423877c::t_f44699cc97f8d5 822,824-825
+  s_a3ca92c423877c::t_00cecccf5c46ed 827-842
+  s_a3ca92c423877c::t_d2494d1fefa8a7 17
+  s_a3ca92c423877c::t_7921f0066d1699 18-19
+  s_a3ca92c423877c::t_62f4c3e5f10ada 843-856
+  s_a3ca92c423877c::t_3581a771ff21b3 143-151,153-158,177,193-240
+  s_a3ca92c423877c::t_f45d13a920b7b9 174-176,178-182,184-192
+  s_a3ca92c423877c::t_76507a95b19d89 128-129,131-136
+  s_a3ca92c423877c::t_ec56cc329894c2 130
+  s_a3ca92c423877c::t_f1d73e69b503ac 338-341
+  s_a3ca92c423877c::t_6a092478804611 159-167
+  s_a3ca92c423877c::t_da5486ff2ac022 168-173,183
+  s_a3ca92c423877c::t_67b8ba11bc99f5 342
+  s_a3ca92c423877c::t_c31b3b3b49f95a 781-790
+  s_a3ca92c423877c::t_ea9e7210b33235 729-735,759
+  s_a3ca92c423877c::t_6180bc3609fe0f 1-16,20-49,241-271,273-289,291-337,343-348,350-352,354-357,359-375,379-728,736-758,760-770,772-773,775-780,791-814,816-821,826
+  s_a3ca92c423877c::t_6a44ce9e035419 59-62
+  s_a3ca92c423877c::t_24b41011b99596 50-52
+  s_a3ca92c423877c::t_a536ae0cbe711a 63-64,95,98-99
+  s_a3ca92c423877c::t_ea315a153c87a2 83-84
+  s_a3ca92c423877c::t_fd1382ae3fda60 96-97,100-103,137-141
+  s_a3ca92c423877c::t_dd4df1b923c2af 104-127,142
+  s_a3ca92c423877c::t_533478b57e708f 152
+app/subjects/nginx.py
+  s_a3ca92c423877c::t_a1a65fe867cb06 1-84
+app/db.py
+  s_a3ca92c423877c::t_1085113c274caf 1-120,135-141,143-190
+  s_a3ca92c423877c::t_66730ff41b2684 121-134,142
+app/static/js/gamedata/helm.js
+  s_a3ca92c423877c::t_53a0ea0affe064 1-4
+app/static/js/labs/violin.js
+  s_a3ca92c423877c::t_bcb75fa0f894a3 1
+app/subjects/guitar.py
+  s_a3ca92c423877c::t_c31c1fd86cb712 1-4
+app/subjects/css.py
+  s_a3ca92c423877c::t_e301319aac951c 3,35
+  s_a3ca92c423877c::t_b374c27ebb5043 1-2,4-34,36
+app/subjects/violin.py
+  s_a3ca92c423877c::t_c31c1fd86cb712 1-4
+app/static/js/labs/observability.js
+  s_a3ca92c423877c::t_c1fbddc04f5ebb 1-3
+app/subjects/argocd.py
+  s_a3ca92c423877c::t_77cb573eb4395e 1-70
+app/routes.py
+  s_a3ca92c423877c::t_07012726b1ab72 1,5-7,11-14,16-28,33-54,65-106,232-325
+  s_a3ca92c423877c::t_f82b9a21236297 9,141-142,144-146,149-163,165-170,173,176-178,221
+  s_a3ca92c423877c::t_b14e35f7a7e509 30-32
+  s_a3ca92c423877c::t_727abe40c8a19a 4,143
+  s_a3ca92c423877c::t_3b3eac982077b7 29
+  s_a3ca92c423877c::t_183973e3141d8d 15
+  s_a3ca92c423877c::t_d13c439fa893b2 55-64
+  s_a3ca92c423877c::t_c3d27d55c7d6f3 2-3,8,10,107-114,117-133,136-137,140,174,179,186-188,190-220,222-230
+  s_a3ca92c423877c::t_3efe3e75cd558b 115-116,189
+  s_a3ca92c423877c::t_813636021a2deb 134-135,138-139
+  s_a3ca92c423877c::t_3f57b9533edd0e 171-172,175
+  s_a3ca92c423877c::t_d220ebaeb50530 180-183,185,231
+  s_a3ca92c423877c::t_5d3112db80fb7f 147-148,164,184
+app/static/js/gamedata/terraform.js
+  s_a3ca92c423877c::t_53a0ea0affe064 1-4
+app/static/js/labs/drums.js
+  s_a3ca92c423877c::t_bcb75fa0f894a3 1
+app/static/js/gamedata/sonarqube.js
+  s_a3ca92c423877c::t_822446a8f847ef 1
+app/static/js/gamedata/artifactory.js
+  s_a3ca92c423877c::t_53a0ea0affe064 1-4
+app/static/js/labs/security.js
+  s_a3ca92c423877c::t_3d7dce0101092e 1-58
+app/static/js/chat.js
+  s_a3ca92c423877c::t_41f311852e948b 277-279
+  s_a3ca92c423877c::t_2d6a292e27fd68 398
+  s_a3ca92c423877c::t_6246c482f20fb5 20-21,226,238-239,313-322,378,382-383,502,510,530-531,533-534
+  s_a3ca92c423877c::t_eaf9d5758f1d69 374,381,392-393,397,409,424-431,433-439,447-448
+  s_a3ca92c423877c::t_86e51d68336414 9,16-19,25-32,36-37,195,203-205,207-209,216,218-225,227,240-243,260,290-303,305-312,323-327,329-332,335-337,340-346,348-369,376-377,379-380,394-396,410-421,423,449-473,475,529,532,536,538
+  s_a3ca92c423877c::t_63b75a1adafbe2 33-35,73
+  s_a3ca92c423877c::t_298eb656f21b79 228-229,232-237
+  s_a3ca92c423877c::t_971419d1c38cdd 23
+  s_a3ca92c423877c::t_03e9fd81c63484 38-44,49-52,54-60,188
+  s_a3ca92c423877c::t_e791950623bf53 269-271,273-276
+  s_a3ca92c423877c::t_aa891d943ef6cc 500
+  s_a3ca92c423877c::t_c8f42d9316cdd4 153
+  s_a3ca92c423877c::t_ac5b3fa6aa1439 477-487,501,505,535,541
+  s_a3ca92c423877c::t_9ed1607af366df 1,79-80,84-152,154-178
+  s_a3ca92c423877c::t_da86dee58aa391 328
+  s_a3ca92c423877c::t_9d36f51cd93a79 53,375
+  s_a3ca92c423877c::t_36b1ea8d0ac6c8 45-48,245-246,249,251,432,440-446,511-515
+  s_a3ca92c423877c::t_680966d164b3e3 214-215,230-231,539-540
+  s_a3ca92c423877c::t_4bda840a7f0945 14,184,250,252-254,287
+  s_a3ca92c423877c::t_a67d1ff0ae73b5 10-13,15,206,210-213,217
+  s_a3ca92c423877c::t_5a3551508e8296 2-8,22,24,61-72,74-78,81-83,179-183,185-187,189-194,196-202,244,247-248,255-259,261-268,280-286,288-289,333-334,370-373,384-391,399-408,422,476,488-497,499,503-504,506-509,516-528,537,542
+  s_a3ca92c423877c::t_80b2bac6a2e6f4 272,304,474,498
+  s_a3ca92c423877c::t_b88fa625c25031 338-339,347
+app/static/js/labs/kafka.js
+  s_a3ca92c423877c::t_5565a52474a7e5 1-20
+app/static/js/gamedata/css.js
+  s_a3ca92c423877c::t_98f3d339f489fc 1
+app/admin.py
+  s_a3ca92c423877c::t_6fdfcb6fef643b 1-277,280-310
+  s_a3ca92c423877c::t_817279b3203147 278-279
+app/subjects/voice.py
+  s_a3ca92c423877c::t_195dc6fd571b7a 1,3-4
+  s_a3ca92c423877c::t_e301319aac951c 2,5
+requirements.txt
+  s_a3ca92c423877c::t_b14e35f7a7e509 1-7
+app/static/js/gamedata/theory.js
+  s_a3ca92c423877c::t_2d8ce766a2cb69 1
+app/subjects/terraform.py
+  s_a3ca92c423877c::t_6d5d842da9b82f 1-74
+app/static/js/labs/javascript.js
+  s_a3ca92c423877c::t_eea3fccb1d9150 22
+  s_a3ca92c423877c::t_6f77b07e011f9d 1-12,14-21,23-50
+  s_a3ca92c423877c::t_f9dbf91d083860 13
+app/subjects/drums.py
+  s_a3ca92c423877c::t_c31c1fd86cb712 1-4
+app/static/js/labs/sonarqube.js
+  s_a3ca92c423877c::t_14f642cc73220d 7
+  s_a3ca92c423877c::t_53b4a55141b139 1-6
+app/static/css/clay.css
+  s_404d6fda1794bd::t_c55c0fa591bffb 632-633
+  s_404d6fda1794bd::t_0f774ccc637fa8 629-631
+  s_404d6fda1794bd::t_b0b18dfa598714 634-636
+.gitignore
+  s_a3ca92c423877c::t_6fdfcb6fef643b 1-9
+app/static/js/app.js
+  s_a3ca92c423877c::t_7cd4fd1e1e03b1 225,234,429,466
+  s_a3ca92c423877c::t_d9f3f53916bd0d 124-181
+  s_a3ca92c423877c::t_5a46d8c08f32d1 105,109
+  s_a3ca92c423877c::t_fa78fcf9ca6ec9 309
+  s_a3ca92c423877c::t_4485efd1bf41ad 198,369,435-459
+  s_a3ca92c423877c::t_8e5377c47f14c2 215,230,305,307-308,310-367,385,409,433,498,511
+  s_a3ca92c423877c::t_7fc20a2c770f0a 469
+  s_a3ca92c423877c::t_57369373be9fd3 6,415-424
+  s_404d6fda1794bd::t_948aef29cbff08 46,63,69,102-104,106-108,110-118,206,223,370,375,387,397,503
+  s_a3ca92c423877c::t_b256e615486180 465,467-468,470-484,488,493
+  s_a3ca92c423877c::t_cdffe91d8931c0 514
+  s_a3ca92c423877c::t_d3c0e657d528df 301-304,306
+  s_a3ca92c423877c::t_3bc9f431442115 231-233,235-239
+  s_a3ca92c423877c::t_438f3ad167d6ce 80-87
+  s_a3ca92c423877c::t_0ad8bfcc5b4d55 3-5
+  s_404d6fda1794bd::t_54c6850cc35f85 47-49,60-62
+  s_404d6fda1794bd::t_5b05cb26d8668d 64-68
+  s_a3ca92c423877c::t_067e2fcab22ae8 182-184,195-197
+  s_a3ca92c423877c::t_d489aeb5f2d304 226-229
+  s_a3ca92c423877c::t_89aff9de75ebf8 240-242,298-300
+  s_a3ca92c423877c::t_f65ec4d9fc5c5a 368
+  s_404d6fda1794bd::t_0375de732c84bd 371-374
+  s_404d6fda1794bd::t_f1979143497e39 388-390,394-396
+  s_a3ca92c423877c::t_225dbf9faabcbf 410-414
+  s_a3ca92c423877c::t_4ddbe95a39d369 425-428
+  s_a3ca92c423877c::t_99f5505351b361 430-432
+  s_a3ca92c423877c::t_84e8be889c3f2c 434
+  s_a3ca92c423877c::t_abed2ab4a290b2 460-464
+  s_a3ca92c423877c::t_8e34d68d52da1c 485-487
+  s_a3ca92c423877c::t_94dec027c18681 489-492
+  s_a3ca92c423877c::t_697e550448869a 494-497
+  s_a3ca92c423877c::t_e43f146ddcf220 512-513
+  s_a3ca92c423877c::t_2f046b4cc831fe 515-517
+  s_a3ca92c423877c::t_004b40a4920455 1-2,7-45,50-59,70-79,88-101,119-123,185-194,199-205,207-214,216-222,224,243-297,376-384,386,391-393,398-408,499-502,504-510,518-525
+app/subjects/_subject_expansions.py
+  s_a3ca92c423877c::t_2df553798c88b9 250,252
+  s_a3ca92c423877c::t_40db492bb5bbb6 246-249,251,253-256
+  s_a3ca92c423877c::t_5078d7746f0f3d 82-146
+  s_a3ca92c423877c::t_9c38c489f686df 147-242
+  s_a3ca92c423877c::t_adb7f78db59690 1-81,243-245
+app/subjects/javascript.py
+  s_a3ca92c423877c::t_8138386ed68540 1-83
+app/static/js/labs/catalog.js
+  s_a3ca92c423877c::t_da5486ff2ac022 1-28
+app/static/js/labs/nodejs.js
+  s_a3ca92c423877c::t_5565a52474a7e5 1-19
+app/static/js/pwa.js
+  s_a3ca92c423877c::t_8a397a11600bdf 1-37
+app/static/css/account.css
+  s_a3ca92c423877c::t_9e7e0985870629 123
+  s_a3ca92c423877c::t_d55412198aa233 140-142,145
+  s_a3ca92c423877c::t_348c808e2c4a3b 159-160
+  s_a3ca92c423877c::t_3285142f880290 108,110-111,113-114
+  s_a3ca92c423877c::t_d8c49f1726e29f 109
+  s_a3ca92c423877c::t_bea81c176bece2 1-12,15-98,151-156,163-166
+  s_a3ca92c423877c::t_d61072a93cf75b 116-118
+  s_a3ca92c423877c::t_e1f021e7f03b57 13-14
+  s_a3ca92c423877c::t_8b63f3aecd1512 112,115
+  s_a3ca92c423877c::t_7d6a6d4716164c 99-107,119-121,124,139,143-144,146-150,157-158,161-162
+  s_a3ca92c423877c::t_6f1e07f36e61e9 122,125-138
+app/static/js/labs/argocd.js
+  s_a3ca92c423877c::t_c1fbddc04f5ebb 1-3
+app/static/js/gamedata/observability.js
+  s_a3ca92c423877c::t_53a0ea0affe064 1-4
+README.md
+  s_a3ca92c423877c::t_43bf8c07e0dafa 39
+  s_a3ca92c423877c::t_74689f06a2271e 1-18,43-94
+  s_a3ca92c423877c::t_e1f021e7f03b57 33-36
+  s_a3ca92c423877c::t_66730ff41b2684 19-32
+  s_a3ca92c423877c::t_de880b2856896e 37
+  s_a3ca92c423877c::t_eff5dd6d983342 38,40
+  s_a3ca92c423877c::t_7c7052b69986f7 42
+  s_a3ca92c423877c::t_7470626f4a7418 41
+.env.example
+  s_a3ca92c423877c::t_6fdfcb6fef643b 8,10-18
+  s_a3ca92c423877c::t_0001720f5aec94 1-7,9
+app/subjects/artifactory.py
+  s_a3ca92c423877c::t_1ddad223d5e017 1-71
+app/subjects/observability.py
+  s_a3ca92c423877c::t_c7eb0f472866bf 1,3-38,83-90
+  s_a3ca92c423877c::t_fafd22ed86b53c 2,39-82
+app/subjects/_beginner_guides.py
+  s_a3ca92c423877c::t_3d949400903951 1-3,16-171,226
+  s_a3ca92c423877c::t_3d23140f6a948c 208-225
+  s_a3ca92c423877c::t_1770f09e09eb99 4-15
+  s_a3ca92c423877c::t_f12299e3e97642 202-207
+  s_a3ca92c423877c::t_3c1ddebc2b574a 172-201
+app/static/js/gamedata/guitar.js
+  s_a3ca92c423877c::t_2d8ce766a2cb69 1
+app/static/js/gamedata/piano.js
+  s_a3ca92c423877c::t_2d8ce766a2cb69 1
+app/static/js/labs/azure.js
+  s_a3ca92c423877c::t_b917236792446b 32,34,36
+  s_a3ca92c423877c::t_199f854f676a59 1,41
+  s_a3ca92c423877c::t_ab0095be7c2ff1 35
+  s_a3ca92c423877c::t_4002541c434d03 2-31,33,37-40,42-57
+app/static/js/labs/terraform.js
+  s_a3ca92c423877c::t_28fb752f237674 2-50,52,55,57-66
+  s_a3ca92c423877c::t_78d01b1231f8b9 51,53-54
+  s_a3ca92c423877c::t_0ffa1cfc0484e8 1,56
+app/static/js/icons.js
+  s_a3ca92c423877c::t_7ce074453c9292 1-21,37-39,41-42,44-45,48,51-74
+  s_a3ca92c423877c::t_7056bdb0301717 33
+  s_a3ca92c423877c::t_85859b1e4d5850 47
+  s_a3ca92c423877c::t_ea1e42a394fea9 43,46,49-50
+  s_a3ca92c423877c::t_e419862607e422 34-36
+  s_a3ca92c423877c::t_9b4da3165f8289 28-32
+  s_a3ca92c423877c::t_e1f021e7f03b57 40
+  s_a3ca92c423877c::t_213a432e992005 22-27
+app/static/js/search.js
+  s_a3ca92c423877c::t_193843e3700325 1-16,44-50,52,86-91,94-105,108,123-128,134,136,144,167-178,181-182,185-249,255-290
+  s_a3ca92c423877c::t_18cb0854ea9905 138-142
+  s_a3ca92c423877c::t_f44fcb5c5ce1ab 20,28-29,33-36,42
+  s_a3ca92c423877c::t_759beb4c70b73a 129-133,135,145-166,179-180,183-184,250-254
+  s_a3ca92c423877c::t_642e41005de521 67-74
+  s_a3ca92c423877c::t_68ba99c93fd68b 17,23-24
+  s_a3ca92c423877c::t_64e9eea0492806 18-19,21-22,25-27,31-32,37-41,43,51,53-66,75-85,93,106-107,109-115,117-122,137,143
+  s_a3ca92c423877c::t_7f2e1f5b47f4a1 30,92,116
+app/static/js/labs/voice.js
+  s_a3ca92c423877c::t_2f9f2394029569 1
+app/static/css/dsa.css
+  s_4b17794e0c565e::t_4a78ad1a769c1e 1-114
+app/static/css/qa.css
+  s_4b17794e0c565e::t_8501568646c90d 1-115
+app/static/js/gamedata/aws.js
+  s_404d6fda1794bd::t_3109d2aa1c7977 1-143
+app/static/js/gamedata/cicd.js
+  s_e680593c08b0d8::t_a81bf86d731902 1-189
+app/static/js/gamedata/ds.js
+  s_f9d32416222c35::t_3bb3ea60631343 1-164
+app/static/js/gamedata/ml.js
+  s_4b17794e0c565e::t_2bdcd7c7511206 1-178
+app/static/js/gamedata/qa.js
+  s_4b17794e0c565e::t_fd6b99dcd9f625 1-202
+app/static/js/games-data.js
+  s_404d6fda1794bd::t_c216de27b44aef 1-231
+app/static/js/games.js
+  s_404d6fda1794bd::t_07d654adf0283d 1-661
+app/static/js/labs/ds.js
+  s_4b17794e0c565e::t_f90da018a99aee 1-1012
+app/static/js/labs/java.js
+  s_404d6fda1794bd::t_57797f1f397821 1-307
+app/static/js/labs/python.js
+  s_404d6fda1794bd::t_027cd5819e318f 1-191
+app/static/js/playground.js
+  s_404d6fda1794bd::t_e9e450da9aa6ff 1-389
+app/static/js/runners.js
+  s_404d6fda1794bd::t_ddb83b67d4242c 1-49
+app/static/js/scenes.js
+  s_404d6fda1794bd::t_9b5eaccb0be69b 1-400
+app/static/js/simulator.js
+  s_404d6fda1794bd::t_1070a0996ae5a6 1-134
+app/subjects/aws.py
+  s_404d6fda1794bd::t_1315e71e495d7d 1-713
+app/subjects/aws_more.py
+  s_404d6fda1794bd::t_d88de2acf2d87b 1-2216
+app/subjects/azure.py
+  s_a3ca92c423877c::t_88f106c227c930 1-41
+app/subjects/db.py
+  s_404d6fda1794bd::t_5ede79ad2c77fa 1-631
+app/subjects/ds.py
+  s_33e2a4edc90df1::t_a9b8a891fb4e78 1-3555
+app/subjects/dsa.py
+  s_33c52c792c6bcd::t_6eff6c19aa8bd0 1-4517
+app/subjects/gcp.py
+  s_a3ca92c423877c::t_5f4a8eab905f34 1-41
+app/subjects/git.py
+  s_404d6fda1794bd::t_401a222b92de43 1-610
+app/subjects/git_more.py
+  s_002eb9e81f9aa9::t_a103b25807d14b 1-1886
+app/subjects/go.py
+  s_a3ca92c423877c::t_edb3706a6b20c1 1-39
+app/subjects/java.py
+  s_404d6fda1794bd::t_0aed4b98d295b3 1-840
+app/subjects/kafka.py
+  s_a3ca92c423877c::t_a7b0934b52b977 1-39
+app/subjects/linux.py
+  s_404d6fda1794bd::t_560d1750e4fd0a 1-767
+app/subjects/linux_more.py
+  s_a1918b8ec782a7::t_74a31302127dbb 1-2154
+app/subjects/networking.py
+  s_a3ca92c423877c::t_44c003f88d9169 1-56
+app/subjects/nodejs.py
+  s_a3ca92c423877c::t_0170e092ea5e1b 1-40
+app/subjects/python.py
+  s_404d6fda1794bd::t_f140ce587142b5 1-855
+app/subjects/python_more.py
+  s_6b33478d1f1383::t_6d8954d433731a 1-3277
+app/subjects/qa.py
+  s_404d6fda1794bd::t_266387652ea460 1-4374
+app/subjects/security.py
+  s_a3ca92c423877c::t_efa1d2fdef5b63 1-56
+app/subjects/sysdesign.py
+  s_404d6fda1794bd::t_aa378b82380b21 1-741
+app/topics.py
+  s_404d6fda1794bd::t_5f82fde8743658 1-2383
+app/topics_more.py
+  s_404d6fda1794bd::t_0b6175394fb8ec 1-3033
+tests/test_subjects.py
+  s_404d6fda1794bd::t_ab1e0599c2c3f9 1-210
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "93c5853d619afdef946806c686675eca02937783",
+  "prompts": {},
+  "humans": {
+    "h_a373eedd7fd2e3": {
+      "author": "rakbiswa <rakbiswa@cisco.com>"
+    }
+  },
+  "sessions": {
+    "s_002eb9e81f9aa9": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "61975403-0e8a-4694-9876-5ea08f7249e7",
+        "model": "claude-opus-5-5-medium"
+      },
+      "human_author": "rakbiswa <rakbiswa@cisco.com>"
+    },
+    "s_33c52c792c6bcd": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "aac70b9f-b3d0-4eed-b1b2-4855177772c2",
+        "model": "claude-opus-5-5-medium"
+      },
+      "human_author": "rakbiswa <rakbiswa@cisco.com>"
+    },
+    "s_33e2a4edc90df1": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "731c5351-94f1-4522-a203-d235cfbd66ce",
+        "model": "claude-opus-5-5-medium"
+      },
+      "human_author": "rakbiswa <rakbiswa@cisco.com>"
+    },
+    "s_404d6fda1794bd": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "f7d70262-2708-49bf-b7b5-bebbd3e4925e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "rakbiswa <rakbiswa@cisco.com>"
+    },
+    "s_4b17794e0c565e": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "472c3b76-d192-4e22-9b87-574765bd72d2",
+        "model": "claude-opus-5-5-medium"
+      },
+      "human_author": "rakbiswa <rakbiswa@cisco.com>"
+    },
+    "s_6b33478d1f1383": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "25144a84-f5e0-4c13-b393-5769dd7aa6fc",
+        "model": "claude-opus-5-5-medium"
+      },
+      "human_author": "rakbiswa <rakbiswa@cisco.com>"
+    },
+    "s_a1918b8ec782a7": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "927840c2-60b0-4d65-9b34-1287877f5ce0",
+        "model": "claude-opus-5-5-medium"
+      },
+      "human_author": "rakbiswa <rakbiswa@cisco.com>"
+    },
+    "s_a3ca92c423877c": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a14b16-6ac7-72a3-a9f7-937b7b2f2d49",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "rakbiswa <rakbiswa@cisco.com>"
+    },
+    "s_e680593c08b0d8": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "350fef84-0da0-48a3-a9db-853d7af3fdf0",
+        "model": "claude-opus-5-5-medium"
+      },
+      "human_author": "rakbiswa <rakbiswa@cisco.com>"
+    },
+    "s_f9d32416222c35": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "2a044644-1c63-47fb-8cce-bad2c3097e07",
+        "model": "claude-opus-5-5-medium"
+      },
+      "human_author": "rakbiswa <rakbiswa@cisco.com>"
+    }
+  }
+}
